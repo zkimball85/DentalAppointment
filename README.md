@@ -61,8 +61,6 @@ To clear all saved appointments, close the app and delete the XML file at the lo
    - Patient name
    - Appointment date/time
    - Notes / reason (optional)
-3. View upcoming appointments
-4. Edit or remove appointments as needed
 
 ## Roadmap / Ideas
 
