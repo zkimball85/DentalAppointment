@@ -5,9 +5,7 @@ DentalAppointment is a Windows desktop app built with **C#** and **WinForms** on
 ## Features
 
 - Create new appointments (patient + date/time + notes)
-- View upcoming appointments
 - Edit/reschedule appointments
-- Cancel/delete appointments
 - Offline-first: stores data locally in XML
 
 ## Requirements
@@ -69,7 +67,6 @@ To clear all saved appointments, close the app and delete the XML file at the lo
 ## Roadmap / Ideas
 
 - Conflict detection (prevent overlapping appointments)
-- Search/filter by patient and date range
 - Export schedule to CSV
 - Print-friendly daily schedule view
 - Basic reminders (Windows notifications)
