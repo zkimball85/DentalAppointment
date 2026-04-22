@@ -78,6 +78,6 @@ To clear all saved appointments, close the app and delete the XML file at the lo
 3. Commit changes: `git commit -m "Describe change"`
 4. Push and open a pull request
 
-## License
+## Screenshots
+<img width="390" height="328" alt="Screen Shot 2026-04-22 at 13 44 18 PM" src="https://github.com/user-attachments/assets/6f95d432-8a28-4c01-83d3-2d8ee65f6fc4" />
 
-Add a `LICENSE` file if you plan to distribute this publicly.
