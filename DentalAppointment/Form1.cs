@@ -109,7 +109,18 @@ public partial class Form1 : Form
             var json = JsonSerializer.Serialize(list, new JsonSerializerOptions { WriteIndented = true });
             await File.WriteAllTextAsync(path, json);
 
-            MessageBox.Show("Appointment confirmed and saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Build a summary message for the user including appointment details
+            // An update to original success message was made to include all relevant appointment information in a clear format.
+            var summary =
+            $"Appointment confirmed and saved.{Environment.NewLine}{Environment.NewLine}Summary:{Environment.NewLine}" +
+            $"Name: {appointment.FullName}{Environment.NewLine}" +
+            $"Phone: {appointment.PhoneNumber}{Environment.NewLine}" +
+            $"Doctor: {appointment.Doctor}{Environment.NewLine}" +
+            $"Date: {appointment.AppointmentDate.ToString("MMMM dd, yyyy - h:mm tt")}" +
+            $"{Environment.NewLine}Office: {appointment.OfficeLocation}{Environment.NewLine}" +
+            $"Reason: {(!string.IsNullOrEmpty(appointment.Reason) ? appointment.Reason : "(none)")}";
+
+        MessageBox.Show(summary, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Reset form fields to defaults after successful save
             txtFullName.Clear();
